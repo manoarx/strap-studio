@@ -1,0 +1,452 @@
+{
+   "html_attributions" : [],
+   "result" : 
+   {
+      "address_components" : 
+      [
+         {
+            "long_name" : "الدُّوج",
+            "short_name" : "الدُّوج",
+            "types" : 
+            [
+               "route"
+            ]
+         },
+         {
+            "long_name" : "E11",
+            "short_name" : "E11",
+            "types" : 
+            [
+               "neighborhood",
+               "political"
+            ]
+         },
+         {
+            "long_name" : "الدانة",
+            "short_name" : "الدانة",
+            "types" : 
+            [
+               "sublocality_level_1",
+               "sublocality",
+               "political"
+            ]
+         },
+         {
+            "long_name" : "أبو ظبي",
+            "short_name" : "أبو ظبي",
+            "types" : 
+            [
+               "locality",
+               "political"
+            ]
+         },
+         {
+            "long_name" : "أبو ظبي",
+            "short_name" : "أبو ظبي",
+            "types" : 
+            [
+               "administrative_area_level_1",
+               "political"
+            ]
+         },
+         {
+            "long_name" : "United Arab Emirates",
+            "short_name" : "AE",
+            "types" : 
+            [
+               "country",
+               "political"
+            ]
+         }
+      ],
+      "adr_address" : "Office# 1704, ADCP Business Tower C, Behind City Season Hotel, Zayed the 1st - \u003cspan class=\"street-address\"\u003eالدُّوج - الدانة - E11\u003c/span\u003e - \u003cspan class=\"region\"\u003eأبو ظبي\u003c/span\u003e - \u003cspan class=\"country-name\"\u003eUnited Arab Emirates\u003c/span\u003e",
+      "business_status" : "OPERATIONAL",
+      "current_opening_hours" : 
+      {
+         "open_now" : true,
+         "periods" : 
+         [
+            {
+               "close" : 
+               {
+                  "date" : "2024-01-02",
+                  "day" : 2,
+                  "time" : "1800"
+               },
+               "open" : 
+               {
+                  "date" : "2024-01-02",
+                  "day" : 2,
+                  "time" : "1000"
+               }
+            },
+            {
+               "close" : 
+               {
+                  "date" : "2024-01-03",
+                  "day" : 3,
+                  "time" : "1800"
+               },
+               "open" : 
+               {
+                  "date" : "2024-01-03",
+                  "day" : 3,
+                  "time" : "1000"
+               }
+            },
+            {
+               "close" : 
+               {
+                  "date" : "2024-01-04",
+                  "day" : 4,
+                  "time" : "1800"
+               },
+               "open" : 
+               {
+                  "date" : "2024-01-04",
+                  "day" : 4,
+                  "time" : "1000"
+               }
+            },
+            {
+               "close" : 
+               {
+                  "date" : "2023-12-29",
+                  "day" : 5,
+                  "time" : "1800"
+               },
+               "open" : 
+               {
+                  "date" : "2023-12-29",
+                  "day" : 5,
+                  "time" : "1000"
+               }
+            },
+            {
+               "close" : 
+               {
+                  "date" : "2023-12-30",
+                  "day" : 6,
+                  "time" : "1800"
+               },
+               "open" : 
+               {
+                  "date" : "2023-12-30",
+                  "day" : 6,
+                  "time" : "1000"
+               }
+            }
+         ],
+         "special_days" : 
+         [
+            {
+               "date" : "2024-01-01",
+               "exceptional_hours" : true
+            }
+         ],
+         "weekday_text" : 
+         [
+            "Monday: Closed",
+            "Tuesday: 10:00 AM – 6:00 PM",
+            "Wednesday: 10:00 AM – 6:00 PM",
+            "Thursday: 10:00 AM – 6:00 PM",
+            "Friday: 10:00 AM – 6:00 PM",
+            "Saturday: 10:00 AM – 6:00 PM",
+            "Sunday: Closed"
+         ]
+      },
+      "formatted_address" : "Office# 1704, ADCP Business Tower C, Behind City Season Hotel, Zayed the 1st - الدُّوج - الدانة - E11 - أبو ظبي - United Arab Emirates",
+      "formatted_phone_number" : "02 677 2216",
+      "geometry" : 
+      {
+         "location" : 
+         {
+            "lat" : 24.4907755,
+            "lng" : 54.37181580000001
+         },
+         "viewport" : 
+         {
+            "northeast" : 
+            {
+               "lat" : 24.4921571302915,
+               "lng" : 54.3731377302915
+            },
+            "southwest" : 
+            {
+               "lat" : 24.4894591697085,
+               "lng" : 54.3704397697085
+            }
+         }
+      },
+      "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color" : "#7B9EB0",
+      "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "international_phone_number" : "+971 2 677 2216",
+      "name" : "STRAP STUDIOS",
+      "opening_hours" : 
+      {
+         "open_now" : true,
+         "periods" : 
+         [
+            {
+               "close" : 
+               {
+                  "day" : 1,
+                  "time" : "1800"
+               },
+               "open" : 
+               {
+                  "day" : 1,
+                  "time" : "1000"
+               }
+            },
+            {
+               "close" : 
+               {
+                  "day" : 2,
+                  "time" : "1800"
+               },
+               "open" : 
+               {
+                  "day" : 2,
+                  "time" : "1000"
+               }
+            },
+            {
+               "close" : 
+               {
+                  "day" : 3,
+                  "time" : "1800"
+               },
+               "open" : 
+               {
+                  "day" : 3,
+                  "time" : "1000"
+               }
+            },
+            {
+               "close" : 
+               {
+                  "day" : 4,
+                  "time" : "1800"
+               },
+               "open" : 
+               {
+                  "day" : 4,
+                  "time" : "1000"
+               }
+            },
+            {
+               "close" : 
+               {
+                  "day" : 5,
+                  "time" : "1800"
+               },
+               "open" : 
+               {
+                  "day" : 5,
+                  "time" : "1000"
+               }
+            },
+            {
+               "close" : 
+               {
+                  "day" : 6,
+                  "time" : "1800"
+               },
+               "open" : 
+               {
+                  "day" : 6,
+                  "time" : "1000"
+               }
+            }
+         ],
+         "weekday_text" : 
+         [
+            "Monday: 10:00 AM – 6:00 PM",
+            "Tuesday: 10:00 AM – 6:00 PM",
+            "Wednesday: 10:00 AM – 6:00 PM",
+            "Thursday: 10:00 AM – 6:00 PM",
+            "Friday: 10:00 AM – 6:00 PM",
+            "Saturday: 10:00 AM – 6:00 PM",
+            "Sunday: Closed"
+         ]
+      },
+      "photos" : 
+      [
+         {
+            "height" : 8256,
+            "html_attributions" : 
+            [
+               "\u003ca href=\"https://maps.google.com/maps/contrib/107323917232021893899\"\u003eSTRAP STUDIOS\u003c/a\u003e"
+            ],
+            "photo_reference" : "AWU5eFimo8OEvDMpcdfeWEvckCCqN2urFWCkeceKyw84hiDDKqbL9Unodbbu2OoSGViHLqT1H1Z7_jm__MVmp-HW_1pSs1d6FqA7sVC7GWT8tbww3LTKWCO7_w10MCyN1-1X8bSGU5Immip9nnZ0LFqgJouf1BKJNFU9qmx04xoUoM7k9Egr",
+            "width" : 5504
+         },
+         {
+            "height" : 853,
+            "html_attributions" : 
+            [
+               "\u003ca href=\"https://maps.google.com/maps/contrib/107323917232021893899\"\u003eSTRAP STUDIOS\u003c/a\u003e"
+            ],
+            "photo_reference" : "AWU5eFjgHKBlw5vGW8jeBcP98-8ysm9zaocBUKAEdkRpLf0RxR8cURJGppWjA0LJwnwS8qmYQUraEu_qTjsYJN1_yQZloleii01nSoskau9Zi8WOoGOnPJwr2hg7ChToTnl3vJl54hs8spLGJ-fXI1GZUpgb5mbE3alE5tUzsm4cxu5W7lfo",
+            "width" : 1280
+         },
+         {
+            "height" : 1664,
+            "html_attributions" : 
+            [
+               "\u003ca href=\"https://maps.google.com/maps/contrib/107323917232021893899\"\u003eSTRAP STUDIOS\u003c/a\u003e"
+            ],
+            "photo_reference" : "AWU5eFgLIQhKPY90n9rUjOygI3xxRfFr-pKrnnKvW1kBAmNIljM8gvLYrO_UPWAo7Qom0R4swHkN2SS2kEnqr0CM_beJ6i7kUa_7-zZSOhJJIBi65xKL_H4TtTlQ9SbRunrD_un_8pchx6KDCwHzVuUwj83bng1KulA6qHfbKCb6TR9M_ooW",
+            "width" : 1110
+         },
+         {
+            "height" : 720,
+            "html_attributions" : 
+            [
+               "\u003ca href=\"https://maps.google.com/maps/contrib/107323917232021893899\"\u003eSTRAP STUDIOS\u003c/a\u003e"
+            ],
+            "photo_reference" : "AWU5eFjwo8Yz2uBD06iEeVm8LpcJ7DUq_x2nVHD-97H-_exkg6csYMkzJW5I3neAgJR9GyUA-eoMnv2JrAQaSY-zg3UkvmUW-Ux8i2rOkl5acVo1NnoXraopgn18ItpFg6c-_wTzXXrKA1VVxMGgLFoSwCwF7R9x7W5jWXeRRX0lq6r4BDs3",
+            "width" : 1080
+         },
+         {
+            "height" : 3024,
+            "html_attributions" : 
+            [
+               "\u003ca href=\"https://maps.google.com/maps/contrib/107323917232021893899\"\u003eSTRAP STUDIOS\u003c/a\u003e"
+            ],
+            "photo_reference" : "AWU5eFizecyIjBkE_ogu87FzjricO0uw63UjN1DmJbiJoDBvKHmlnTOpR8scCQK8MAeqkNWrxbAo5YyPjuu4hFBjoC-1m5lb8Ze_IKaiuND5QKu0jA7FnLLPADCNDfytAXmwYJzr7oGElXytaYVKI4F403h-gicmjyXwfBcYw9Ye4xekdyxB",
+            "width" : 4032
+         },
+         {
+            "height" : 5173,
+            "html_attributions" : 
+            [
+               "\u003ca href=\"https://maps.google.com/maps/contrib/107323917232021893899\"\u003eSTRAP STUDIOS\u003c/a\u003e"
+            ],
+            "photo_reference" : "AWU5eFgTo1B4xrTr9c1YHCGvHtF7EXO_awG5MM-qgfvu0UwVRT1TZ4j2F83d47Rhw11heraOitrU5Dp-Ti5JVSkJS3Cjco_CQt1BWViLqfH7ctAh6MBEAwEH_o6fHZ97Mv6T65pJLpiT33u9QKtlMY4_fX5LlHVLYQyUy74VbWkavHwuosWs",
+            "width" : 7759
+         },
+         {
+            "height" : 2400,
+            "html_attributions" : 
+            [
+               "\u003ca href=\"https://maps.google.com/maps/contrib/107323917232021893899\"\u003eSTRAP STUDIOS\u003c/a\u003e"
+            ],
+            "photo_reference" : "AWU5eFhNb3XnTAhv302m1WQ-JnUYxaQXN8grlhpJ6zJN2-sQlAUWTeepwlVs9q1rJdE7gmu7a9Ouf7YpV2a5BgKb2lpKXnMrH2toQIqzM67rEluzkw24x8fLVCQ_xfU6JEOY1qoBd1YDgwDIm_WXcmOKaWTPr-CCyF0FgB8wNKboYQBvhSSu",
+            "width" : 1600
+         },
+         {
+            "height" : 3120,
+            "html_attributions" : 
+            [
+               "\u003ca href=\"https://maps.google.com/maps/contrib/107323917232021893899\"\u003eSTRAP STUDIOS\u003c/a\u003e"
+            ],
+            "photo_reference" : "AWU5eFg3rT4pcQwwlcrIz45L5AvHDD3dlgRVvMMtkqkiMbhdKln-2WvMjAZ5scWu92mm6PIPRx91kHvl9TjwIpewtqqqEwBXt1Y4r20JxboziqUYU4Prok9w66Fucmpgd39_eJdAqtx3-cPkl01i83TOZVLjdZs0b1EWo-Ix67F8AIlPOis7",
+            "width" : 4160
+         },
+         {
+            "height" : 8256,
+            "html_attributions" : 
+            [
+               "\u003ca href=\"https://maps.google.com/maps/contrib/107323917232021893899\"\u003eSTRAP STUDIOS\u003c/a\u003e"
+            ],
+            "photo_reference" : "AWU5eFjKjRhoOOyBTiL63brxvQMGWAJTD-ICG8xU5l-rHYR5S3cPGpsxHsmOPUp6Gx4TABMLWW_gqRADHcuuYnW_tf6MaNGJbBA9PpWZVDQYrD33WcLehmxNFZ6QlXjGl_qnmRtaw3QHYlnhtI9bjBFnMdi_ms4RfdZCf7y0DbE2kGoKraIF",
+            "width" : 5504
+         },
+         {
+            "height" : 6048,
+            "html_attributions" : 
+            [
+               "\u003ca href=\"https://maps.google.com/maps/contrib/107323917232021893899\"\u003eSTRAP STUDIOS\u003c/a\u003e"
+            ],
+            "photo_reference" : "AWU5eFho_xqISzQ9Z9p85vEBg0COZjp9kuZ8PICBT3jS-V7izu_7yUcTw5lxVBtLuule8cA79L-i9mY1pFLXR7Pm6DPdiPurJJeJ-3LdmFUDIchYiXp5JG9Qp9nib7GI5OJY42G9YiWhElQdtEyucgC7-JUdB84WnR2VXMaFiktfrEGVWgZt",
+            "width" : 4024
+         }
+      ],
+      "place_id" : "ChIJwy050AlmXj4RXWn9-Tu6iFQ",
+      "plus_code" : 
+      {
+         "compound_code" : "F9RC+8P Abu Dhabi - United Arab Emirates",
+         "global_code" : "7HPPF9RC+8P"
+      },
+      "rating" : 4.8,
+      "reference" : "ChIJwy050AlmXj4RXWn9-Tu6iFQ",
+      "reviews" : 
+      [
+         {
+            "author_name" : "Amy Blunden",
+            "author_url" : "https://www.google.com/maps/contrib/101171323774301378182/reviews",
+            "language" : "en",
+            "original_language" : "en",
+            "profile_photo_url" : "https://lh3.googleusercontent.com/a-/ALV-UjUW4pRJK3fNXQq7qlMiKI97QDW6w4ISgVkG2R8aJzL6cTc=s128-c0x00000000-cc-rp-mo",
+            "rating" : 5,
+            "relative_time_description" : "3 months ago",
+            "text" : "Extremely happy with my experience with STRAP Studios. The whole process from booking to the shoot was extremely easy. When modelling it’s important to feel comfortable and welcome and I definitely felt that during my shoot. There’s a changing room to the side for privacy and also ample mirrors to check you’re looking the part! I felt very comfortable during The shoot and was able to check my pose after every shot thanks to the helpful iPad that was placed next to the shooting area. Overall I’m extremely happy with my experience and I can’t wait to get all my pictures back!",
+            "time" : 1694248771,
+            "translated" : false
+         },
+         {
+            "author_name" : "Cecille Rose Cajipo",
+            "author_url" : "https://www.google.com/maps/contrib/102400095276172791550/reviews",
+            "language" : "en",
+            "original_language" : "en",
+            "profile_photo_url" : "https://lh3.googleusercontent.com/a/ACg8ocK_hIcHi6DpiUqNelGmrjTO4qmJzg3bEAi-TJPuAPFw=s128-c0x00000000-cc-rp-mo",
+            "rating" : 5,
+            "relative_time_description" : "3 months ago",
+            "text" : "Strap Studio is one of a kind. They are very accomodating and professional. They even extended their time just to make sure that they give me the best they can. It's a 10 over 10 for me. Will surely refer my friends to their studio. 😊",
+            "time" : 1694096971,
+            "translated" : false
+         },
+         {
+            "author_name" : "Mohamed Nasser",
+            "author_url" : "https://www.google.com/maps/contrib/107827287181461546199/reviews",
+            "language" : "en",
+            "original_language" : "en",
+            "profile_photo_url" : "https://lh3.googleusercontent.com/a-/ALV-UjUqyQJohhiMgBjlf2jYEQyYDdaxYfhFzLaY_jSh5P65t1s=s128-c0x00000000-cc-rp-mo",
+            "rating" : 5,
+            "relative_time_description" : "3 months ago",
+            "text" : "Anuj is very professional. He kept taking pictures and changing poses until he got a perfect shot that we both like. I totally recommend them for business portraits.",
+            "time" : 1694250460,
+            "translated" : false
+         },
+         {
+            "author_name" : "Merza Shishani",
+            "author_url" : "https://www.google.com/maps/contrib/100267404690587278593/reviews",
+            "language" : "en",
+            "original_language" : "en",
+            "profile_photo_url" : "https://lh3.googleusercontent.com/a/ACg8ocL0XDADFcsJx1v93GFyfHm-r7fgCXRcIcFHcRKqzm6w=s128-c0x00000000-cc-rp-mo",
+            "rating" : 5,
+            "relative_time_description" : "2 months ago",
+            "text" : "I had a shooting session with Anuj. Amazing experience; Anuj makes it so easy but yet the outcome is elegant. Thanks guy and I will be back👍",
+            "time" : 1696060753,
+            "translated" : false
+         },
+         {
+            "author_name" : "Lauren Bianca Muller",
+            "author_url" : "https://www.google.com/maps/contrib/100507863395293817189/reviews",
+            "language" : "en",
+            "original_language" : "en",
+            "profile_photo_url" : "https://lh3.googleusercontent.com/a-/ALV-UjX5QdXW_zpZQqs22xW5ucZuJcspk0cI82nF2JxuodgcEKg=s128-c0x00000000-cc-rp-mo",
+            "rating" : 5,
+            "relative_time_description" : "2 months ago",
+            "text" : "Extremely professional photos, I’m so happy with the experience and the outcome! Great tips and recommendations on posing to get the most out of your shot!",
+            "time" : 1697011613,
+            "translated" : false
+         }
+      ],
+      "types" : 
+      [
+         "point_of_interest",
+         "establishment"
+      ],
+      "url" : "https://maps.google.com/?cid=6091323262778567005",
+      "user_ratings_total" : 55,
+      "utc_offset" : 240,
+      "vicinity" : "Office# 1704, ADCP Business Tower C, Behind City Season Hotel, Zayed the 1st - الدُّوج",
+      "website" : "http://www.strapstudios.com/",
+      "wheelchair_accessible_entrance" : true
+   },
+   "status" : "OK"
+}
