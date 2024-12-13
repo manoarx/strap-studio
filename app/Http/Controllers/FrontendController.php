@@ -200,6 +200,7 @@ class FrontendController extends Controller
 
     public function services()
     {
+        seoTool(setting('services_title'), setting('services_description'), setting('services_keyword'), setting('services_ogimage'));
         $services = Services::get();
         return view('frontend.services', compact('services'));
     }
@@ -224,6 +225,7 @@ class FrontendController extends Controller
     public function servicePackage($slug)
     {
         $service = Services::where('slug',$slug)->first();
+        seoTool($service->title, $service->description, $service->keyword, $service->ogimage);
         $selectedDates = OrderItem::whereNotNull('booked_stime')->pluck('booked_stime');
         return view('frontend.service_package',compact('service','selectedDates'));
     }
