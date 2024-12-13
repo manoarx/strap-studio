@@ -15,7 +15,7 @@ use App\Models\ServicePackageOptions;
 use App\Models\ServicePackageAddons;
 use App\Models\StudioRentals;
 use App\Models\Order;
-use App\Models\OrderItem; 
+use App\Models\OrderItem;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
@@ -126,7 +126,7 @@ class FrontendController extends Controller
               'header' => 'Accept-language: '.$option['your_language_for_tran']."\r\n" .
               "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36\r\n"
             )
-          );  
+          );
           $result = file_get_contents($url, false, stream_context_create($arrContextOptions));
         }
         $fp = fopen('reviews.json', 'w');
@@ -181,12 +181,12 @@ class FrontendController extends Controller
         $user = User::find(Auth::user()->id);
 
         $token = Str::random(64);
-  
+
         UserVerify::create([
-              'user_id' => $user->id, 
+              'user_id' => $user->id,
               'token' => $token
             ]);
-        
+
         $verificationUrl = route('user.verify', $token);
         $userName = $user->username;
         $userType = $user->type;
@@ -212,7 +212,7 @@ class FrontendController extends Controller
             return response()->json(array(
                 'exists' => true
             ));
-            
+
         }else{
             return response()->json(array(
                 'exists' => false
@@ -337,7 +337,7 @@ class FrontendController extends Controller
 
 
         ContactForm::create($request->all());
-    
+
 
         Mail::send('emails.mail', array(
             'name' => $request->get('name'),

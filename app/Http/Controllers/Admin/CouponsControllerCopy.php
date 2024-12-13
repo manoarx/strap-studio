@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 use App\Models\Coupons;
 use Carbon\Carbon;
 
-class CouponsController extends Controller
+class CouponsControllerCopy extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -40,11 +40,11 @@ class CouponsController extends Controller
      */
     public function store(Request $request)
     {
-        
+
 
         Coupons::insert([
             'coupon_name' => strtoupper($request->coupon_name),
-            'coupon_discount' => $request->coupon_discount, 
+            'coupon_discount' => $request->coupon_discount,
             'coupon_validity' => $request->coupon_validity,
         ]);
 
@@ -93,7 +93,7 @@ class CouponsController extends Controller
 
         Coupons::findOrFail($id)->update([
             'coupon_name' => strtoupper($request->coupon_name),
-            'coupon_discount' => $request->coupon_discount, 
+            'coupon_discount' => $request->coupon_discount,
             'coupon_validity' => $request->coupon_validity,
         ]);
 
@@ -102,9 +102,9 @@ class CouponsController extends Controller
             'alert-type' => 'success'
         );
 
-        return redirect()->route('admin.coupons.index')->with($notification); 
+        return redirect()->route('admin.coupons.index')->with($notification);
 
-        
+
 
     }
 

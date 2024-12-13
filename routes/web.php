@@ -1,22 +1,27 @@
 <?php
 
+use Spatie\Permission\Models\Role;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\Auth\LoginController;
 //use App\Http\Controllers\Auth\VerificationController;
-use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\CartController;
-use App\Http\Controllers\WishlistController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\StripeController;
-use App\Http\Controllers\Admin\OrderController;
-use App\Http\Controllers\Admin\OrderInvoiceController;
-use App\Http\Controllers\Admin\QuickBookController;
+use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\WishlistController;
+use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\GoogleAuthController;
+use App\Http\Controllers\QuickBooksController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\QuickBooksApiController;
 use App\Http\Controllers\GoogleCalendarController;
-use App\Http\Controllers\GoogleAuthController;
-use Spatie\Permission\Models\Role;
+use App\Http\Controllers\Admin\QuickBookController;
+use App\Http\Controllers\Admin\SchoolOrderController;
+use App\Http\Controllers\Auth\VerificationController;
+use App\Http\Controllers\Admin\OrderInvoiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,12 +35,12 @@ use Spatie\Permission\Models\Role;
 */
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('home', function () {
-    return view('welcome');
-})->name('home');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+// Route::get('home', function () {
+//     return view('welcome');
+// })->name('home');
 
 Route::get('testsms', [App\Http\Controllers\FrontendController::class, 'smsTest'])->name('testsms');
 
@@ -101,7 +106,7 @@ Route::get('/google/apiclient', [GoogleCalendarController::class, 'googleApiClie
 
 
 
- // Stripe All Route 
+ // Stripe All Route
 Route::controller(StripeController::class)->group(function(){
 
     Route::post('/create-payment-intent' , 'createPaymentIntent')->name('stripe.createPaymentIntent');
@@ -114,7 +119,7 @@ Route::controller(StripeController::class)->group(function(){
 
     Route::get('/payment/error' , 'paymentError')->name('payment.error');
 
-}); 
+});
 
 //Route::get('/quickbooks', [QuickBooksApiController::class, 'index']);
 //Route::get('/quickbooks/callback', [QuickBooksApiController::class, 'callback']);
@@ -165,7 +170,7 @@ All customer Routes List
 Route::middleware(['auth', 'user-access:customer', 'is_verify_email'])->group(function () {
     Route::get('/customer/profilecart', [HomeController::class, 'customerProfileCart'])->name('customer.profilecart');
     Route::get('/customer/profile', [HomeController::class, 'customerProfile'])->name('customer.profile');
-    
+
     Route::post('/customer/profile/store', [HomeController::class, 'customerProfileStore'])->name('customer.profile.store');
     Route::put('/customer/update/password', [HomeController::class, 'customerUpdatePassword'])->name('customer.update.password');
     Route::get('/customer/wishlist', [WishlistController::class, 'customerWishlist'])->name('customer.wishlist');
@@ -182,7 +187,7 @@ All Admin Routes List
 --------------------------------------------
 --------------------------------------------*/
 // Route::middleware(['auth', 'user-access:admin'])->group(function () {
-  
+
 //     Route::get('/admin/dashboard', [HomeController::class, 'adminDashboard'])->name('admin.dashboard');
 //     Route::get('/admin/news', [NewsController::class, 'index'])->name('admin.news');
 // });
@@ -191,7 +196,7 @@ All Admin Routes List
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'App\Http\Controllers\Admin', 'middleware' => ['auth', 'user-access:admin']], function () {
 
-        
+
 
         Route::post('remove-offerimage/{id}', 'BannersController@removeOfferImage')->name('remove.offerimage');
         Route::get('delete/banners/{id}' , 'BannersController@delete')->name('banners.delete');
@@ -287,7 +292,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'App\Http\Co
             Route::get('/confirmed/order' , 'AdminConfirmedOrder')->name('confirmed.order');
 
             Route::get('/processing/order' , 'AdminProcessingOrder')->name('processing.order');
-         
+
             Route::get('/delivered/order' , 'AdminDeliveredOrder')->name('delivered.order');
 
             Route::get('/order/details/{order_id}' , 'AdminOrderDetails')->name('order.details');
@@ -312,7 +317,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'App\Http\Co
 
         });
 
-        // Admin School Order All Route 
+        // Admin School Order All Route
         Route::controller(SchoolOrderController::class)->group(function(){
             Route::get('/schoolordersprint' , 'OrdersPrint')->name('schoolordersprint');
 
@@ -321,9 +326,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'App\Http\Co
             Route::get('/confirmed/schoolorder' , 'AdminConfirmedOrder')->name('confirmed.schoolorder');
 
             Route::get('/processing/schoolorder' , 'AdminProcessingOrder')->name('processing.schoolorder');
-         
+
             Route::get('/delivered/schoolorder' , 'AdminDeliveredOrder')->name('delivered.schoolorder');
-            
+
             /*Route::get('/order/details/{order_id}' , 'AdminOrderDetails')->name('order.details');
 
             Route::get('/pending/confirm/{order_id}' , 'PendingToConfirm')->name('pending-confirm');
@@ -388,7 +393,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'App\Http\Co
 
             Route::post('update/password', 'adminUpdatePassword')->name('update.password');
 
-            Route::get('/all/admin', 'AllAdmin')->name('all.admin'); 
+            Route::get('/all/admin', 'AllAdmin')->name('all.admin');
 
             Route::get('/add/admin', 'AddAdmin')->name('add.admin');
 
@@ -404,10 +409,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'App\Http\Co
 
         Route::get('/quickbooks/login', [QuickBookController::class, 'login'])->name('quickbook.createtoken');
 
-        Route::get('/quickbooks/callback', [QuickBookController::class, 'callback'])->name('quickbook.callback');        
+        Route::get('/quickbooks/callback', [QuickBookController::class, 'callback'])->name('quickbook.callback');
 });
-  
- 
+
+
 Route::get('create-role', function () {
     $role = Role::create(['name' => 'writer']);
 });
