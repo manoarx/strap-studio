@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Settings extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory;
 
-    public $table = 'settings';
+    public $timestamps = false;
 
     protected $dates = [
         'created_at',

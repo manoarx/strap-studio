@@ -41,10 +41,11 @@ class SettingsController extends Controller
      */
     public function store(Request $request)
     {
-
-        $settings = Settings::create($request->all());
-
-        $settings->save();
+        $data = $request->validate([
+            'key' => 'required|unique:settings,key|string',
+            'value' => 'required|string',
+        ]);
+        $settings = Settings::create($data);
 
         return redirect()->route('admin.settings.index');
     }
@@ -80,26 +81,11 @@ class SettingsController extends Controller
      */
     public function update(Request $request, Settings $setting)
     {
-        $setting->update(array_merge($request->all(), ['slug' => Str::slug($request->name)]));
-
-        /*if (count($setting->photos) > 0) {
-            foreach ($setting->photos as $media) {
-                if (!in_array($media->file_name, $request->input('photos', []))) {
-                    $media->delete();
-                }
-            }
-        }
-
-        $media = $setting->photos->pluck('file_name')->toArray();
-
-        foreach ($request->input('photos', []) as $file) {
-            if (count($media) === 0 || !in_array($file, $media)) {
-                $setting->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('photos');
-            }
-        }*/
-
-        $setting->save();
-
+        $data = $request->validate([
+            'key' => 'nullable|string|unique:settings,key,' . $setting->id,
+            'value' => 'required|string',
+        ]);
+        $setting->update($data);
         return redirect()->route('admin.settings.index');
     }
 
@@ -123,7 +109,7 @@ class SettingsController extends Controller
         return response(null, Response::HTTP_NO_CONTENT);
     }
 
-    
+
 
 
 }

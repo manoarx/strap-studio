@@ -75,7 +75,7 @@ return [
                 ],
             ],
             'telephone'   => '+97126772216',
-            'email'       => 'strapstudios@gmail.com',
+            'email'       => 'info@strapstudios.com',
             'address'     => [
                 '@type'           => 'PostalAddress',
                 'streetAddress'   => '1704 - ADCP Business Tower C, Electra Street',
@@ -86,8 +86,9 @@ return [
             ],
             'sameAs'      => [
                 'https://www.facebook.com/StrapStudios',
-                'https://www.instagram.com/StrapStudios',
+                'https://www.instagram.com/strapstudiosme',
                 'https://www.x.com/StrapStudios',
+                'https://www.linkedin.com/company/strapstudios',
             ],
             'aggregateRating' => [
                 '@type'       => 'AggregateRating',
