@@ -55,6 +55,7 @@ class FrontendController extends Controller
 
     public function index()
     {
+        seoTool('Strap Studios');
         $services = Services::limit(6)->get();
         $workshops = Workshops::limit(6)->get();
         $portfolios = Portfolios::limit(6)->get();
