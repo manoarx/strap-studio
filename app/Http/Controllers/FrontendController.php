@@ -226,7 +226,7 @@ class FrontendController extends Controller
     public function servicePackage($slug)
     {
         $service = Services::where('slug',$slug)->first();
-        seoTool($service->meta_title, $service->meta_description, $service->meta_keywords, asset($service->main_image, 'upload/no_image.jpg'));
+        seoTool($service->meta_title??$service->title, $service->meta_description??Str::words(strip_tags($service->short_title), 200), $service->meta_keywords, asset($service->main_image, 'upload/no_image.jpg'));
         $selectedDates = OrderItem::whereNotNull('booked_stime')->pluck('booked_stime');
         return view('frontend.service_package',compact('service','selectedDates'));
     }
