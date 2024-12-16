@@ -88,7 +88,7 @@ class ServicesController extends Controller
             for ($i=0; $i < $attr_count; $i++) {
                 if(isset($request->package_id[$i]) && $request->package_id[$i] > 0) {
                     $package_update = ServicePackages::findOrFail($request->package_id[$i]);
-                
+
                     $package_update->service_id = $service_id;
                     $package_update->package_name = $request->package_name[$i] ?? '';
                     $package_update->about_package = $request->about_package[$i] ?? '';
@@ -118,7 +118,7 @@ class ServicesController extends Controller
                     for ($k=0; $k < $addon_attr_count; $k++) {
                         if(isset($request->package_addons_id[$package_id][$k]) && $request->package_addons_id[$package_id][$k] > 0) {
                             $addon_update = ServicePackageAddons::findOrFail($request->package_addons_id[$package_id][$k]);
-                        
+
                             $addon_update->service_id = $service_id;
                             $addon_update->service_package_id = $package_id ?? '';
                             $addon_update->addon_name = $request->addon_name[$package_id][$k] ?? '';
@@ -141,7 +141,7 @@ class ServicesController extends Controller
                     for ($k=0; $k < $option_attr_count; $k++) {
                         if(isset($request->package_options_id[$package_id][$k]) && $request->package_options_id[$package_id][$k] > 0) {
                             $option_update = ServicePackageOptions::findOrFail($request->package_options_id[$package_id][$k]);
-                        
+
                             $option_update->service_id = $service_id;
                             $option_update->service_package_id = $package_id ?? '';
                             $option_update->option_name = $request->option_name[$package_id][$k] ?? '';
@@ -180,7 +180,7 @@ class ServicesController extends Controller
                     for ($k=0; $k < $addon_attr_count; $k++) {
                         if(isset($request->package_addons_id[$package_id][$k]) && $request->package_addons_id[$package_id][$k] > 0) {
                             $addon_update = ServicePackageAddons::findOrFail($request->package_addons_id[$package_id][$k]);
-                        
+
                             $addon_update->service_id = $service_id;
                             $addon_update->service_package_id = $package_id ?? '';
                             $addon_update->addon_name = $request->addon_name[$package_id][$k] ?? '';
@@ -203,7 +203,7 @@ class ServicesController extends Controller
                     for ($k=0; $k < $option_attr_count; $k++) {
                         if(isset($request->package_options_id[$package_id][$k]) && $request->package_options_id[$package_id][$k] > 0) {
                             $option_update = ServicePackageOptions::findOrFail($request->package_options_id[$package_id][$k]);
-                        
+
                             $option_update->service_id = $service_id;
                             $option_update->service_package_id = $package_id ?? '';
                             $option_update->option_name = $request->option_name[$package_id][$k] ?? '';
@@ -279,7 +279,7 @@ class ServicesController extends Controller
 
         }
 
-        
+
 
         if (count($service->photos) > 0) {
             foreach ($service->photos as $media) {
@@ -322,7 +322,7 @@ class ServicesController extends Controller
         return response(null, Response::HTTP_NO_CONTENT);
     }
 
-    
+
 
 
 }

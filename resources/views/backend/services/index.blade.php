@@ -40,7 +40,7 @@
             </thead>
             <tbody>
               @foreach($services as $key => $service)
-              @php 
+              @php
               $package_cnt=DB::table('service_packages')->select('id')->where('service_id',$service->id)->count();
               $addons_cnt=DB::table('service_package_addons')->select('id')->where('service_id',$service->id)->count();
               $options_cnt=DB::table('service_package_options')->select('id')->where('service_id',$service->id)->count();
@@ -119,6 +119,19 @@
               <label for="desc" class="form-label"></label>
               <img id="showImage" src="{{ url('upload/no_image.jpg') }}" alt="Admin" style="width:100px; height: 100px;"  >
             </div>
+            <div class="col-md-12">
+              <label for="meta_title" class="form-label">Meta Title</label>
+              <input type="text" name="meta_title" id="meta_title" class="form-control" required>
+            </div>
+            <div class="col-md-12">
+              <label for="meta_description" class="form-label">Meta Description</label>
+              <textarea name="meta_description" id="meta_description" class="form-control" style="height: 100px"></textarea>
+            </div>
+            <div class="col-md-12">
+              <label for="meta_keywords" class="form-label">Meta Keywords</label>
+              <textarea name="meta_keywords" id="meta_keywords" class="form-control" style="height: 100px"></textarea>
+            </div>
+
             <div class="text-center">
               <button type="submit" class="btn btn-primary">Submit</button>
               <button type="reset" class="btn btn-secondary">Reset</button>
@@ -167,14 +180,14 @@
         rules: {
             name: {
                 required : true,
-            }, 
+            },
         },
         messages :{
             name: {
                 required : 'Please Enter client Name',
             },
         },
-        errorElement : 'span', 
+        errorElement : 'span',
         errorPlacement: function (error,element) {
             error.addClass('invalid-feedback');
             element.closest('.form-group').append(error);

@@ -29,6 +29,9 @@ class Services extends Model implements HasMedia
         'portfolio_url',
         'created_at',
         'updated_at',
+        'meta_title',
+        'meta_description',
+        'meta_keywords',
     ];
 
     public function registerMediaConversions(Media $media = null): void
@@ -37,7 +40,7 @@ class Services extends Model implements HasMedia
         $this->addMediaConversion('medium')->width(800);
     }
 
-    
+
 
     public function getPhotosAttribute()
     {

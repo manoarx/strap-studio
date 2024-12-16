@@ -201,7 +201,7 @@ class FrontendController extends Controller
 
     public function services()
     {
-        seoTool(setting('services_title'), setting('services_description'), setting('services_keyword'), setting('services_ogimage'));
+        seoTool(setting('services_title'), setting('services_description'), setting('services_keyword'));
         $services = Services::get();
         return view('frontend.services', compact('services'));
     }
@@ -226,19 +226,22 @@ class FrontendController extends Controller
     public function servicePackage($slug)
     {
         $service = Services::where('slug',$slug)->first();
-        seoTool($service->title, $service->description, $service->keyword, $service->ogimage);
+        seoTool($service->meta_title, $service->meta_description, $service->meta_keywords, asset($service->main_image, 'upload/no_image.jpg'));
         $selectedDates = OrderItem::whereNotNull('booked_stime')->pluck('booked_stime');
         return view('frontend.service_package',compact('service','selectedDates'));
     }
 
     public function studiorentals()
     {
+        seoTool(setting('studiorental_title'), setting('studiorental_description'), setting('studiorental_keyword'));
+
         $studiorentals = StudioRentals::get();
         return view('frontend.studiorentals', compact('studiorentals'));
     }
 
     public function workshops()
     {
+        seoTool(setting('workshop_title'), setting('workshop_description'), setting('workshop_keyword'));
 
         return view('frontend.workshops');
     }
@@ -246,11 +249,14 @@ class FrontendController extends Controller
     public function workshopDetail($slug)
     {
         $workshop = Workshops::where('slug',$slug)->first();
+        seoTool($workshop->title, Str::words(strip_tags($workshop->about_course), 200), $workshop->keywords, asset($workshop->image, 'upload/no_image.jpg'));
+
         return view('frontend.workshop_detail',compact('workshop'));
     }
 
     public function portfolio()
     {
+        seoTool(setting('portfolio_title'), setting('portfolio_description'), setting('portfolio_keyword'));
 
         return view('frontend.portfolio');
     }
@@ -276,6 +282,8 @@ class FrontendController extends Controller
 
     public function about()
     {
+        seoTool(setting('about_title'), setting('about_description'), setting('about_keyword'));
+
         $apiKey = 'AIzaSyDitGtorEewE1g-sRpmuS7cA6PkZvnnMuw';
         $placeId = 'ChIJwy050AlmXj4RXWn9-Tu6iFQ';
 
@@ -314,16 +322,22 @@ class FrontendController extends Controller
 
     public function contact()
     {
+        seoTool(setting('contact_title'), setting('contact_description'), setting('contact_keyword'));
+
         return view('frontend.contact');
     }
 
     public function privacypolicy()
     {
+        seoTool(setting('privacy_title'), setting('privacy_description'), setting('privacy_keyword'));
+
         return view('frontend.privacypolicy');
     }
 
     public function termsofuse()
     {
+        seoTool(setting('terms_title'), setting('terms_description'), setting('terms_keyword'));
+
         return view('frontend.termsofuse');
     }
 
